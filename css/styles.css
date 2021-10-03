@@ -19,3 +19,16 @@ h1{
         flex-direction: row;
         justify-content: space-between;
     }
+
+    /* Estilo de la barra de navegación. */
+    nav ul{
+        list-style: none;
+        background-color: blue;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li{
+        display: inline-block;
+        width: 16%;
+        
+    }
