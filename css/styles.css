@@ -35,3 +35,9 @@ h1{
         color: white;   
         text-decoration: none;
     }
+
+    form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
