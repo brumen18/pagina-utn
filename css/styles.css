@@ -23,12 +23,15 @@ h1{
     /* Estilo de la barra de navegación. */
     nav ul{
         list-style: none;
-        background-color: blue;
+        background-color: #87CEEB;
         margin: 0;
         padding: 0;
     }
     nav ul li{
         display: inline-block;
         width: 16%;
-        
+    }
+    nav ul li a{
+        color: white;   
+        text-decoration: none;
     }
