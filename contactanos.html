@@ -30,6 +30,7 @@
     <h2>Ante cualquier sugerencia o consulta, dejanos un mensaje en el siguiente formulario.</h2>
     <p>por favor, introducí tus datos para que contactemos con vos en la brevedad posible. Tus datos no serán compartidos con nadie.</p>
         <form action="" method="POST">
+            <div class="formulario">
             <label for="nombre">Nombre</label>
             <input type="text" maxlength="200" placeholder="Nombre" id="nombre" name="nombre">
             <label for="apellidos">Apellidos</label>
@@ -37,10 +38,13 @@
             <label for="correo">Correo electrónico</label>
             <input type="email" autocomplete="email" id="correo" name="correo" placeholder="correo electrónico">
             <label for="mensaje">Mensaje</label>
-            <textarea  type="text" rows="4" wrap="soft" id="mensaje" name="mensaje"></textarea>
+            <textarea  type="text" rows="8"  wrap="soft" id="mensaje" name="mensaje" placeholder="mensaje" style="float: right; margin-left: 2em;"></textarea>
+        </div>
+            <input type="submit" value="Enviar">
+
         </form>
     </main>
-    <a href="http://sysargentina.blogspot.com/" target="_blank">¡Visitá nuestro blog!</a>
+    <a href="http://sysargentina.blogspot.com/" target="_blank" style="margin: 10px;">¡Visitá nuestro blog!</a>
     <p>© Copyright SYS Informática.Todos los derechos reservados.</p>
 </body>
 </html>

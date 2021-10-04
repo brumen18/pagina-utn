@@ -36,8 +36,25 @@ h1{
         text-decoration: none;
     }
 
-    form{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+.formulario{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+    button{
+        color: #367588;
+        background-color: #D4AF37;
+        position: relative;
+        left: 50%;
+        padding: 10px;
+    }
+
+    button:focus{
+        color: #EF7F1A;
+        background-color: #367588;
+        position: relative;
+        left: 50%;
+        padding: 10px;
     }
