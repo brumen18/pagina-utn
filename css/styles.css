@@ -43,7 +43,7 @@ h1{
 }
 
 
-    button{
+    input[type=submit]{
         color: #367588;
         background-color: #D4AF37;
         position: relative;
@@ -51,10 +51,11 @@ h1{
         padding: 10px;
     }
 
-    button:focus{
+    input[type=submit]:focus{
         color: #EF7F1A;
         background-color: #367588;
         position: relative;
         left: 50%;
         padding: 10px;
     }
+
