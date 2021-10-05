@@ -65,3 +65,7 @@ h1{
         flex-direction: row;
         justify-content: space-around;
     }
+/* Esto coloca un borde azul índigo al contenido de la pag */
+    .reborde{
+        border: 1px #367588 solid;
+    }
