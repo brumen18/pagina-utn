@@ -1,12 +1,12 @@
-/* Esto centra el título. */
-.centrado{
-   display: flex; 
-   flex-direction: row;
-   justify-content: center;
+/* Esto coloca los vídeos de servicios uno sobre otro */
+.vertical{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 h1{
-    align-items: center;
+    text-align: center;
     font-weight: 100;
 }
 
@@ -23,7 +23,7 @@ h1{
     /* Estilo de la barra de navegación. */
     nav ul{
         list-style: none;
-        background-color: #ADD8E6;
+        background-color: #0275d8;
         margin: 0;
         padding: 0;
     }
@@ -68,4 +68,7 @@ h1{
 /* Esto coloca un borde azul índigo al contenido de la pag */
     .reborde{
         border: 1px #367588 solid;
+    }
+    footer{
+     margin: 10px;   
     }
