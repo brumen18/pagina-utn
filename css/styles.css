@@ -1,15 +1,18 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
 /* Esto coloca los vídeos de servicios uno sobre otro */
 .vertical{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
+/* Esto centra los encabezados de nivel 1 */
 h1{
     text-align: center;
     font-weight: 100;
 }
-
+/* Un pequeño margen para las p */
     p{
         margin-left: 10px;
     }
@@ -35,14 +38,22 @@ h1{
         color: white;   
         text-decoration: none;
     }
-
+.activo{
+    border-color: #D4AF37;
+    color: #D4AF37;
+}
+    nav ul li a:hover{
+        border-color: #D4AF37;
+        color: #D4AF37;
+    }
+/* Una clase para acomodar los cuadros del formulario */
 .formulario{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
 }
 
-
+/* Se coloca el botón de color */
     input[type=submit]{
         color: #367588;
         background-color: #D4AF37;
@@ -59,8 +70,8 @@ h1{
         padding: 10px;
     }
 
-
-    .video{
+/* Se define una clase para las fotos de temas de interés */
+    .temas{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -69,6 +80,7 @@ h1{
     .reborde{
         border: 1px #367588 solid;
     }
+    /* Estilo del pie de página. */
     footer{
      margin: 10px;   
     }
