@@ -1,0 +1,22 @@
+    <h1>¡Contactanos!</h1>
+   <p>Estamos ubicados en los Toldos, provincia de Buenos Aires (Argentina), calle Alem, local 341.</p>
+   <img src="images/mlt.jpg" alt="Mapa de Los Toldos" style="display: block; float: right;">
+    <p>Podés contactarnos a través de nuestro correo (<a href="mailto:info@sysargentina.com.ar">info@sysargentina.com.ar</a>) o llamando al (+54) 2358-442033, (+54) 2355-411864, o podés <a href="https://wa.me/+542358400011" target="_blank" style="text-decoration: none;"><i class="fab fa-whatsapp"> chatear con nosotros en Whatsapp</i></a>. También podés escribirnos al (+54) 2358-400011. ¡Te esperamos!</p>
+    <h2>Ante cualquier sugerencia o consulta, dejanos un mensaje en el siguiente formulario.</h2>
+    <p>por favor, introducí tus datos para que contactemos con vos en la brevedad posible. Tus datos no serán compartidos con nadie.</p>
+        <form action="/contactanos" method="post">
+            <div class="formulario">
+            <label for="nombre">Nombre</label>
+            <input type="text" maxlength="200" placeholder="Nombre" id="nombre" name="nombre">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" maxlength="400" name="apellidos" id="apellidos" placeholder="Apellidos">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" autocomplete="email" id="correo" name="correo" placeholder="correo electrónico">
+            <label for="mensaje">Mensaje</label>
+            <textarea  type="text" rows="8"  wrap="soft" id="mensaje" name="mensaje" placeholder="mensaje" style="float: right; margin-left: 2em;"></textarea>
+        </div>
+            <input type="submit" value="Enviar">
+        </form>
+    {{#if message}}
+        <p>{{message}}</p>
+    {{/if}}

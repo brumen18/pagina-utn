@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{#if isIndex}}
+     <title>Bienvenido - SYS Informática Los Toldos</title>
+     {{/if}}
+     {{#if isQuienessomos}}
+    <title>Quiénes somos - SYS Informática Los Toldos</title>
+     {{/if}}
+     {{#if isHistoria}}
+     <title>Nuestra historia - SYS Informática Los Toldos</title>
+     {{/if}}
+     {{#if isServicios}}
+    <title>Nuestros servicios - SYS Informática Los Toldos</title>
+     {{/if}}
+     {{#if isTemasinteres}}
+    <title>Temas de interés - SYS Informática Los Toldos</title>
+     {{/if}}
+     {{#if isContactanos}}
+    <title>Contactanos - SYS Informática Los Toldos</title>
+     {{/if}}
+     {{#if isTecnoambiental}}
+    <title>Tecnología y medio ambiente - SYS Informática Los Toldos</title>
+     {{/if}}
+     {{#if isTecnologiacontabilidad}}
+    <title>La tecnología, una herramienta que facilita la contabilidad - SYS Informática Los Toldos</title>
+     {{/if}}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <p style="background-color: #367588; color: white; text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 50px; font-weight: 100;">SYS</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">SYS</a></li>
+                <li><a class="{{#if isQuienessomos}}activo{{/if}}" href="quienessomos">Quiénes somos</a></li>
+                <li><a class="{{#if isHistoria}}activo{{/if}}" href="historia">Nuestra historia</a></li>
+                <li><a class="{{#if isServicios}}activo{{/if}}" href="servicios">Servicios</a></li>
+                <li><a  class="{{#if isTemasinteres}}activo{{/if}}" href="temasinteres">Temas de interés</a></li>
+                <li><a class="{{#if isContactanos}}activo{{/if}}" href="contactanos">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <img src="images/syslogoposta.png" alt="SYS Informatica Los Toldos" style="margin-left: 10px; margin-top: 10px;">
+    <main class="reborde">
+{{{body}}}
+</main>
+    <footer>
+    <a href="http://sysargentina.blogspot.com/" target="_blank">¡Visitá nuestro blog!</a>
+    <p>© Copyright SYS Informática.Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
