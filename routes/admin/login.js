@@ -1,28 +1,32 @@
 var express=require('express');
-var router=express.router();
+var router=express.Router();
+    var usuarios=require('./../../models/usuarios');
 
-
-router.get('/'), function(req, res, next){
+router.get('/', function(req, res, next){
     res.render('admin/login',{
-    isLogin: true;    
+    
     });
-});
+}); // admin/login.js
 
-router.post('/'), async (req, res, next) =>{
+router.post('/', async (req, res, next) =>{
     try{
         var usuario=req.body.usuario;
         var password=req.body.password;
         console.log(req.body);
-        var data=await usuariosBD.GetUserYPassword(usuario, password);
+        var data=await usuarios.getUserYPassword(usuario, password);
         if (data != undefined) {
-            res.redirect('/admin/inicio');
+            req.session.id_usuario = data.id;
+            req.session.nombre=data.usuario;
+            res.redirect('/contactanos');
 
         }else{
             res.render('admin/login', {
-                error: true;
+                error: true,
             });
         }
     } catch(error){
         console.log(error);
-    }
+    };
 });
+
+module.exports = router;

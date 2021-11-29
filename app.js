@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('dotenv').config();
+  var session=require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,7 +15,7 @@ var serviciosRouter = require('./routes/servicios'); // servicios.js
 var temasinteresRouter = require('./routes/temasinteres'); // temasinteres.js
 var tecnoambientalRouter = require('./routes/tecnoambiental'); // tecnoambiental.js
 var tecnologiacontabilidadRouter = require('./routes/tecnologiacontabilidad'); // tecnologiacontabilidad.js
-
+  var loginRouter=require('./routes/admin/login') // admin/login.js
 
 
 
@@ -32,16 +33,35 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+  app.use(session({
+    secret: process.env.SECRET_KEY,
+    resave: false,
+      saveUninitialized: false,
+  }));
+  
+
+
+  secured = async(req,res,next) =>{
+        try{
+          if (req.session.id_usuario){
+            next();
+          }else{
+            res.redirect('/admin/login');
+          }
+        }catch(error){
+          console.log(error);
+        }
+      }
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/contactanos', contactanosRouter);
+app.use('/contactanos', secured, contactanosRouter);
 app.use('/historia', historiaRouter);
 app.use('/quienessomos', quienessomosRouter);
 app.use('/servicios', serviciosRouter);
 app.use('/temasinteres', temasinteresRouter);
 app.use('/tecnoambiental', tecnoambientalRouter);
 app.use('/tecnologiacontabilidad', tecnologiacontabilidadRouter);
-
+  app.use('/admin/login', loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
