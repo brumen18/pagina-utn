@@ -6,6 +6,7 @@ var express=require('express');
     router.get('/', async function (req, res, next) {
         var temas=await tisys.ObtenerTI();
         res.render('admin/tib', {
+            isTib: true,
             layout: 'admin/layout',
             temas
         }); // admin/tib.hbs

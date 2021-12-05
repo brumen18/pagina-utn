@@ -7,6 +7,7 @@ var express=require('express');
         // console.log(texto)
  var texto=tib.texto;
         res.render('admin/articulo', {
+            isArticulo: true,
             layout: 'admin/layout',
 texto
         });
