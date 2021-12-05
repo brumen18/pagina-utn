@@ -17,6 +17,7 @@ var tecnoambientalRouter = require('./routes/tecnoambiental'); // tecnoambiental
 var tecnologiacontabilidadRouter = require('./routes/tecnologiacontabilidad'); // tecnologiacontabilidad.js
   var loginRouter=require('./routes/admin/login') // admin/login.js
   var tibRouter=require('./routes/admin/tib') // tib.js
+  var articuloRouter=require('./routes/admin/articulo') // admin/articulo.js
 
 
 
@@ -64,6 +65,7 @@ app.use('/tecnoambiental', tecnoambientalRouter);
 app.use('/tecnologiacontabilidad', tecnologiacontabilidadRouter);
   app.use('/admin/login', loginRouter);
   app.use('/admin/tib', tibRouter);
+  app.use('/admin/articulo', articuloRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

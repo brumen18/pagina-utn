@@ -5,10 +5,24 @@ var express=require('express');
 
     router.get('/', async function (req, res, next) {
         var temas=await tisys.ObtenerTI();
-console.log(temas);
         res.render('admin/tib', {
+            layout: 'admin/layout',
             temas
         }); // admin/tib.hbs
     });
+
+    router.get('/articulo/:id', async (req, res, next)=>{
+        try{
+        var id=req.params.id;
+        var texto= await tisys.ObtenerTI1(id);
+        module.exports.texto=texto;
+         res.redirect('/admin/articulo');
+        console.log('holaaaa');
+
+        }catch(error) {
+            console.log(error);
+        }
+        });
+        
 
     module.exports=router;

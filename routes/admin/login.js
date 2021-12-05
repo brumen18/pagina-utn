@@ -4,7 +4,8 @@ var router=express.Router();
 
 router.get('/', function(req, res, next){
     res.render('admin/login',{
-    
+        isLogin: true,
+        layout: 'admin/layout'
     });
 }); // admin/login.js
 
