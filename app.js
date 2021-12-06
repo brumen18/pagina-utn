@@ -56,7 +56,7 @@ app.use(express.static(path.join(__dirname, 'public')));
       }
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/contactanos', secured, contactanosRouter);
+app.use('/contactanos', contactanosRouter);
 app.use('/historia', historiaRouter);
 app.use('/quienessomos', quienessomosRouter);
 app.use('/servicios', serviciosRouter);
@@ -64,7 +64,7 @@ app.use('/temasinteres', temasinteresRouter);
 app.use('/tecnoambiental', tecnoambientalRouter);
 app.use('/tecnologiacontabilidad', tecnologiacontabilidadRouter);
   app.use('/admin/login', loginRouter);
-  app.use('/admin/tib', tibRouter);
+  app.use('/admin/tib', secured, tibRouter);
   app.use('/admin/articulo', articuloRouter);
 
 // catch 404 and forward to error handler

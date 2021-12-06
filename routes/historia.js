@@ -7,5 +7,6 @@ router.get('/', function (req, res, next) {
         isHistoria:true
     }); // historia.hbs 
 });
+    
 
 module.exports = router;
