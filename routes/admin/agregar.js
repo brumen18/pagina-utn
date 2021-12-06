@@ -4,6 +4,7 @@ var router=express.Router;
 
     router.get('/', async function (req, res, next) {
         res.render('admin/agregar', {
+            layout: 'admin/layout',
           isAgregar: true
 
         });
