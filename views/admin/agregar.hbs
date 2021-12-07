@@ -1,0 +1,27 @@
+<h1>Agregar tema</h1>
+    <p>Ingresa tu tema en los campos siguientes.</p>
+        <form method="get">
+            <label for="titulo">Ingresa un título (este se mostrará en la lista de temas)</label>
+            <input type="text" maxlength="60" placeholder="título" name="titulo" id="titulo">
+            <label for="cuerpo">Ingresa el cuerpo del artículo (utiliza las opciones para darle un estilo más atractivo)</label>
+        <textarea name="temainteres" id="temainteres" rows="3" placeholder="Cuerpo del artículo">hola</textarea>
+        <input type="submit" value="enviame">
+    </form>
+       <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
+    <script>
+         tinymce.init({
+   selector: 'textarea#temainteres',
+   language: 'es_MX',
+   height: 500,
+   menubar: false,
+   plugins: [
+     'advlist autolink lists link image charmap print preview anchor',
+     'searchreplace visualblocks code fullscreen',
+     'insertdatetime media table paste code help wordcount'
+   ],
+   toolbar: 'undo redo | formatselect | ' +
+   'bold italic backcolor | alignleft aligncenter ' +
+   'alignright alignjustify | bullist numlist outdent indent | ' +
+   'removeformat | help'
+ });
+    </script>

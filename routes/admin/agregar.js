@@ -1,13 +1,15 @@
 var express=require('express');
-var router=express.Router;  
-    var tisys=require('./../../models/tisys');
+    var router=express.Router();
+    var tib=require('./tib');
+
 
     router.get('/', async function (req, res, next) {
         res.render('admin/agregar', {
+            isAgregar: true,
             layout: 'admin/layout',
-          isAgregar: true
-
         });
-    });
+            });
 
-    module.exports=router;
+
+
+            module.exports=router;
