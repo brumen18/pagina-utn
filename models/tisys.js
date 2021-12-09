@@ -18,4 +18,9 @@ var pool=require('./bd');
             }
         }
 
-        module.exports={ObtenerTI, ObtenerTI1};
+        async function insertarTema(titulo, cuerpo){
+            var query='INSERT INTO tisys (titulo, cuerpo) VALUES (?, ?)';
+            var row=await pool.query(query,[titulo,cuerpo]);
+            return row;
+        }
+        module.exports={ObtenerTI, ObtenerTI1, insertarTema};
