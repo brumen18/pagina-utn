@@ -7,21 +7,23 @@ var express=require('express');
         res.render('admin/agregar', {
             isAgregar: true,
             layout: 'admin/layout',
-            message: 'El artículo se ha insertado correctamente.',
         });
             });
 
             router.post('/', async function (req, res, next){
                 try{
-                    console.log(req.body);
                     var titulo=req.body.titulo;
                     var cuerpo=req.body.cuerpo;
                     await tisys.insertarTema(titulo, cuerpo);
-                    console.log('hola');
+                    res.render('admin/agregar', {
+                        isAgregado: true,
+                    });
                     } catch(error){
                         console.log(error);
+                        res.render('admin/agregar', {
+                            isError: true,
+                        });
                     }
-            
-                                  });
+                                              });
 
             module.exports=router;

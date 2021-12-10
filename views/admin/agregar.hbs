@@ -7,9 +7,13 @@
         <textarea name="cuerpo" id="cuerpo" rows="3" placeholder="Cuerpo del artículo">hola</textarea>
         <input type="submit" value="enviame">
     </form>
-    {{#if message}}
-    <p>{{message}}</p>
-    {{/if}}
+  {{#if isAgregado}}
+  <p>Su artículo se ha publicado exitosamente.</p>
+  <a href="/admin/tib">Visitar temas de interés</a>
+  {{/if}}
+  {{#if isError}}
+  <p>Ocurrió un error al intentar publicar su artículo. Inténtelo de nuevo.</p>
+  {{/if}}
        <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
     <script>
          tinymce.init({
