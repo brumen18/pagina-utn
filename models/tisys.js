@@ -23,4 +23,18 @@ var pool=require('./bd');
             var row=await pool.query(query,[titulo,cuerpo]);
             return row;
         }
-        module.exports={ObtenerTI, ObtenerTI1, insertarTema};
+
+        async function eliminarTema(id){
+            var query='DELETE FROM tisys WHERE id=?';
+            var row=await pool.query(query,[id]);
+            return row;
+        }
+
+        async function actualizarTI(id, titulo, cuerpo){
+            var query='UPDATE tisys SET titulo=?, cuerpo=? WHERE id=?';
+            var row=await pool.query(query,[id,titulo,cuerpo]);
+            return row;
+        }
+
+
+        module.exports={ObtenerTI, ObtenerTI1, insertarTema, eliminarTema, actualizarTI};

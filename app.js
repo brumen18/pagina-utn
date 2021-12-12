@@ -19,6 +19,7 @@ var tecnologiacontabilidadRouter = require('./routes/tecnologiacontabilidad'); /
   var tibRouter=require('./routes/admin/tib') // tib.js
   var articuloRouter=require('./routes/admin/articulo') // admin/articulo.js
   var agregarRouter=require('./routes/admin/agregar') // admin/agregar.js
+  var editarRouter=require('./routes/admin/editar') // admin/editar.js
 
 
 
@@ -69,7 +70,8 @@ app.use('/tecnologiacontabilidad', tecnologiacontabilidadRouter);
   app.use('/admin/login', loginRouter);
   app.use('/admin/tib', secured, tibRouter);
   app.use('/admin/articulo', articuloRouter);
-  app.use('/admin/agregar', agregarRouter);
+  app.use('/admin/agregar', secured, agregarRouter);
+  app.use('/admin/editar', editarRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
