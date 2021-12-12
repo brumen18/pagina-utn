@@ -2,26 +2,25 @@
     var router=express.Router();
     var tisys=require('./../../models/tisys');
     var articulo=require('./articulo');
+    var tib=require('./tib');
 
 
     router.get('/', async(req, res, next)=>{
         var id=articulo.id;
-        var titulo=articulo.titulo;
-        var cuerpo=articulo.cuerpo;
+        var texto=tib.texto;
         res.render('admin/editar', {
             isEditar: true,
             layout: 'admin/layout',
             id,
-            titulo,
-            cuerpo,
+            texto,
         });
     });
 
     router.post('/', async(req, res, next)=>{
         try{
             var id=articulo.id;
-            var titulo=articulo.titulo;
-            var cuerpo=articulo.cuerpo;
+            var titulo=req.body.titulo;
+            var cuerpo=req.body.cuerpo;
             await tisys.actualizarTI(id, titulo, cuerpo);
             res.render('admin/editar', {
                         isEditado: true,

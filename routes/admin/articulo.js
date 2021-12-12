@@ -20,14 +20,10 @@ texto
                 res.redirect('/admin/tib');
             });
 
-            router.get('/editar/:id/:titulo/:cuerpo', async(req, res, next)=>{
+            router.get('/editar/:id', async(req, res, next)=>{
                 var id=req.params.id;
-                var titulo=req.params.titulo;
-                var cuerpo=req.params.cuerpo;
-               modules.exports.id=id;
-                module.exports.titulo=titulo;
-                module.exports.cuerpo=cuerpo;
-                //res.redirect('/admin/editar');
+               module.exports.id=id;
+                res.redirect('/admin/editar');
             });
 
             module.exports=router;
