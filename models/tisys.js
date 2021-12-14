@@ -30,10 +30,10 @@ var pool=require('./bd');
             return row;
         }
 
-        async function actualizarTI(id, titulo, cuerpo){
+        async function actualizarTI(titulo, cuerpo, id){
             var query='UPDATE tisys SET titulo=?, cuerpo=? WHERE id=?';
-            var row=await pool.query(query,[id,titulo,cuerpo]);
-            return row;
+            var rows=await pool.query(query,[titulo,cuerpo,id]);
+            return rows;
         }
 
 

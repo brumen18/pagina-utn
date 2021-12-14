@@ -13,6 +13,7 @@ var historiaRouter = require('./routes/historia'); // historia.js
 var quienessomosRouter = require('./routes/quienessomos'); // quienessomos.js
 var serviciosRouter = require('./routes/servicios'); // servicios.js
 var temasinteresRouter = require('./routes/temasinteres'); // temasinteres.js
+  var articulo1Router=require('./routes/articulo'); // articulo al publico.js
 var tecnoambientalRouter = require('./routes/tecnoambiental'); // tecnoambiental.js
 var tecnologiacontabilidadRouter = require('./routes/tecnologiacontabilidad'); // tecnologiacontabilidad.js
   var loginRouter=require('./routes/admin/login') // admin/login.js
@@ -63,8 +64,9 @@ app.use('/users', usersRouter);
 app.use('/contactanos', contactanosRouter);
 app.use('/historia', historiaRouter);
 app.use('/quienessomos', quienessomosRouter);
-app.use('/servicios', serviciosRouter);
-app.use('/temasinteres', temasinteresRouter);
+  app.use('/servicios', serviciosRouter);
+  app.use('/temasinteres', temasinteresRouter);
+      app.use('/articulo', articulo1Router);
 app.use('/tecnoambiental', tecnoambientalRouter);
 app.use('/tecnologiacontabilidad', tecnologiacontabilidadRouter);
   app.use('/admin/login', loginRouter);

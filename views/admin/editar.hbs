@@ -1,9 +1,9 @@
     <h1>Editar artículo</h1>
     <form action="/admin/editar" method="post">
     {{#each texto}}
-    <label for="titulo">Título del artículo</label>
+    <label>Título del artículo</label>
     <input type="text" name="titulo" maxlength="60" id="titulo" value="{{titulo}}" placeholder="título">
-    <label for="cuerpo">Cuerpo del artículo</label>
+    <label>Cuerpo del artículo</label>
             <textarea name="cuerpo" id="cuerpo" rows="3" placeholder="Cuerpo">{{cuerpo}}</textarea>
             <input type="submit" value="Actualizar artículo">
                 {{/each}}

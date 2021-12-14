@@ -4,7 +4,8 @@
         <img src="images/temas-2.jpg" alt="Persona trabajando en 2 ordenadores">
     </div>
     <p>Acá podrás ver diversos temas de interés que pueden beneficiar a tu empresa.</p>
-        <ul>
-            <li><a href="tecnologiacontabilidad">La tecnología, una nueva forma de llevar la contabilidad.</a></li>
-            <li><a href="tecnoambiental">Tecnología y medioambiente. Amigos o enemigos.</a></li>
-        </ul>
+    <ul>
+{{#each temas}}
+    <li><a href="/temasinteres/articulo/{{id}}">{{titulo}}</a></li>
+    {{/each}}
+    </ul>

@@ -7,6 +7,7 @@
 
     router.get('/', async(req, res, next)=>{
         var id=articulo.id;
+      
         var texto=tib.texto;
         res.render('admin/editar', {
             isEditar: true,
@@ -21,7 +22,7 @@
             var id=articulo.id;
             var titulo=req.body.titulo;
             var cuerpo=req.body.cuerpo;
-            await tisys.actualizarTI(id, titulo, cuerpo);
+            await tisys.actualizarTI(titulo, cuerpo, id);
             res.render('admin/editar', {
                         isEditado: true,
         });

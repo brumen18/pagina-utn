@@ -1,11 +1,29 @@
-var express = require('express');
-var router = express.Router();
+    var express = require('express');
+        var router = express.Router();
+    var tisys=require('./../models/tisys');
 
-/* GET home page. */
-router.get('/', function (req, res, next) {
+        router.get('/', async function (req, res, next) {
+            var temas=await tisys.ObtenerTI();
     res.render('temasinteres', {
-        isTemasinteres:true
+        isTemasinteres:true,
+        temas
     }); // temasinteres.hbs
 });
+
+router.get('/articulo/:id', async (req, res, next)=>{
+    try{
+    var id=req.params.id;
+    var texto= await tisys.ObtenerTI1(id);
+    module.exports.texto=texto;
+     res.redirect('/articulo');
+    console.log('holaaaa');
+
+    }catch(error) {
+        console.log(error);
+    }
+    });
+    
+
+
 
 module.exports = router;
