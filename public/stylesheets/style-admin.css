@@ -1,0 +1,22 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Esto centra los encabezados de nivel 1 */
+h1{
+    text-align: center;
+    font-weight: 100;
+}
+/* Un pequeño margen para las p */
+    p{
+        margin-left: 10px;
+    }
+/* Esto coloca un borde azul índigo al contenido de la pag */
+.reborde{
+    border: 1px #367588 solid;
+}
+
+/* Estilo del pie de página. */
+    footer{
+        margin: 10px;   
+       }
