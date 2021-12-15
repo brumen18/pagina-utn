@@ -3,7 +3,7 @@ var express=require('express');
     var contacto=require('./../../models/contacto');
 
     router.get('/', async(req, res, next)=>{
-        var datosContacto=contacto.ObtenerContacto();
+        var datosContacto=await contacto.ObtenerContacto();
         res.render('admin/contactanos', {
             layout: 'admin/layout',
             isContactanos: true,
