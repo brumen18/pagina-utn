@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
+    var contacto=require('./../models/contacto');
 
 
 /* GET home page. */
@@ -17,7 +18,7 @@ router.post('/', async (req, res, next) => {
     var apellidos = req.body.apellidos; //1
     var correo = req.body.correo; //2
     var mensaje = req.body.mensaje; //3
-
+    await contacto.insertarConsulta(nombre, apellidos, correo, mensaje);
 
     var obj = {
         to: 'elagusiglesias1916@gmail.com',
