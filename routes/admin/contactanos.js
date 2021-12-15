@@ -11,5 +11,10 @@ var express=require('express');
         });
     });
 
+    router.get('/eliminar/:id', async (req, res, next)=>{
+        var id=req.params.id;
+        await contacto.eliminarContacto(id);
+        res.redirect('/admin/contactanos');
+    });
 
     module.exports=router;
