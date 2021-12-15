@@ -7,12 +7,12 @@
     <tbody>
         <tr>
             {{#each datosContacto}}
-            <td>{{nombre}}</td>
+            <td>{{nombre}} {{apellidos}}</td>
             <td>{{correo}}</td>
             <td>{{mensaje}}</td>
             <td>
                 <a href="/admin/contactanos/eliminar/{{id}}">Eliminar consulta</a>
-                <a href="/admin/contactanos/editar/{{id}}">Modificar consulta</a>
+                <a href="/admin/contactanos/editarcontacto/{{id}}">Modificar consulta</a>
                 </td>
         </tr>
         {{/each}}

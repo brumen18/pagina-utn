@@ -22,6 +22,7 @@ var tecnologiacontabilidadRouter = require('./routes/tecnologiacontabilidad'); /
   var agregarRouter=require('./routes/admin/agregar') // admin/agregar.js
   var editarRouter=require('./routes/admin/editar') // admin/editar.js
     var contactanosAdminRouter=require('./routes/admin/contactanos'); // contactanos admin.js
+      var editarcontactoRouter=require('./routes/admin/editarcontacto'); // admin/editarcontacto.js
 
 
 
@@ -75,6 +76,8 @@ app.use('/tecnologiacontabilidad', tecnologiacontabilidadRouter);
   app.use('/admin/agregar', secured, agregarRouter);
   app.use('/admin/editar', editarRouter);
           app.use('/admin/contactanos', contactanosAdminRouter);
+      app.use('/admin/editarcontacto', editarcontactoRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
