@@ -14,9 +14,7 @@ var quienessomosRouter = require('./routes/quienessomos'); // quienessomos.js
 var serviciosRouter = require('./routes/servicios'); // servicios.js
 var temasinteresRouter = require('./routes/temasinteres'); // temasinteres.js
   var articulo1Router=require('./routes/articulo'); // articulo al publico.js
-var tecnoambientalRouter = require('./routes/tecnoambiental'); // tecnoambiental.js
-var tecnologiacontabilidadRouter = require('./routes/tecnologiacontabilidad'); // tecnologiacontabilidad.js
-  var loginRouter=require('./routes/admin/login') // admin/login.js
+   var loginRouter=require('./routes/admin/login') // admin/login.js
   var tibRouter=require('./routes/admin/tib') // tib.js
   var articuloRouter=require('./routes/admin/articulo') // admin/articulo.js
   var agregarRouter=require('./routes/admin/agregar') // admin/agregar.js
@@ -68,15 +66,13 @@ app.use('/quienessomos', quienessomosRouter);
   app.use('/servicios', serviciosRouter);
   app.use('/temasinteres', temasinteresRouter);
       app.use('/articulo', articulo1Router);
-app.use('/tecnoambiental', tecnoambientalRouter);
-app.use('/tecnologiacontabilidad', tecnologiacontabilidadRouter);
   app.use('/admin/login', loginRouter);
   app.use('/admin/tib', secured, tibRouter);
   app.use('/admin/articulo', articuloRouter);
   app.use('/admin/agregar', secured, agregarRouter);
-  app.use('/admin/editar', editarRouter);
-          app.use('/admin/contactanos', contactanosAdminRouter);
-      app.use('/admin/editarcontacto', editarcontactoRouter);
+  app.use('/admin/editar', secured, editarRouter);
+          app.use('/admin/contactanos', secured,  contactanosAdminRouter);
+      app.use('/admin/editarcontacto', secured, editarcontactoRouter);
 
 
 // catch 404 and forward to error handler

@@ -18,8 +18,6 @@ var express=require('express');
         var texto= await tisys.ObtenerTI1(id);
         module.exports.texto=texto;
          res.redirect('/admin/articulo');
-        console.log('holaaaa');
-
         }catch(error) {
             console.log(error);
         }
