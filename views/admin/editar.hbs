@@ -1,5 +1,5 @@
     <h1>Editar artículo</h1>
-    <form action="/admin/editar" method="post">
+    <form class="formulario1"  action="/admin/editar" method="post">
     {{#each texto}}
     <label>Título del artículo</label>
     <input type="text" name="titulo" maxlength="60" id="titulo" value="{{titulo}}" placeholder="título">
@@ -13,7 +13,7 @@
     <a href="/admin/tib">Visita los temas de interés.</a>
     {{/if}}
     {{#if isErrored}}
-    <p>Ocurrió un error. Intenta nuevamente más tarde.</p>
+    <p style="margin-top: 5px; color: #ff0000;">Ocurrió un error. Intenta nuevamente más tarde.</p>
     {{/if}}
 
            <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
@@ -21,7 +21,7 @@
          tinymce.init({
    selector: 'textarea#cuerpo',
    language: 'es_MX',
-   height: 500,
+   height: 250,
    menubar: false,
    plugins: [
      'advlist autolink lists link image charmap print preview anchor',

@@ -7,7 +7,7 @@
     {{#if isLogin}}
     <title>Iniciar sesión - SYS Informática Los Toldos</title>
     {{/if}}
-    {{if isTib}}
+    {{#if isTib}}
         <title>Temas de interés - SYS Informática Los Toldos</title>
         {{/if}}
         {{#if isArticulo}}
@@ -18,6 +18,12 @@
         {{#if isAgregar}}
     <title>Agregar artículo - SYS Informática Los Toldos</title>
     {{/if}}
+    {{#if isEditarcontacto}}
+    <title>Editar consulta - SYS Informática Los Toldos</title>
+    {{/if}}
+    {{#if isContactanos}}
+    <title>Contactanos - SYS Informática Los Toldos</title>
+    {{/if}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
@@ -26,8 +32,16 @@
 </head>
 <body>
     <p style="background-color: #367588; color: white; text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 50px; font-weight: 100;">SYS</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/admin/tib" class="{{#if isTib}}activo{{/if}}">Temas de interés administrador</a></li>
+                <li><a href="/admin/contactanos" class="{{#if isContactanos}}activo{{/if}}">Contacto administrador</a></li>
+            </ul>
+        </nav>
+    </header>
     <img src="/images/syslogoposta.png" alt="SYS Informatica Los Toldos" style="margin-left: 10px; margin-top: 10px;">
-    <main class="reborde">
+        <main class="reborde">
 {{{body}}}
 </main>
     <footer>

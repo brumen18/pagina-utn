@@ -10,13 +10,68 @@ h1{
 /* Un pequeño margen para las p */
     p{
         margin-left: 10px;
+        margin-right: 10px;
     }
 /* Esto coloca un borde azul índigo al contenido de la pag */
 .reborde{
     border: 1px #367588 solid;
 }
 
+
+        /* Estilo de la barra de navegación. */
+        nav ul{
+            list-style: none;
+            background-color: #0275d8;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline-block;
+            width: 16%;
+        }
+        nav ul li a{
+            color: white;   
+            text-decoration: none;
+        }
+    .activo{
+        border-color: #D4AF37;
+        color: #D4AF37;
+    }
+        nav ul li a:hover{
+            border-color: #D4AF37;
+            color: #D4AF37;
+        }
+/* Una clase para acomodar los cuadros del formulario */
+.formulario{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+    .formulario1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+/* Se coloca el botón de color */
+    input[type=submit]{
+        color: #367588;
+        background-color: #D4AF37;
+    }
+
+    input[type=submit]:focus{
+        color: #EF7F1A;
+        background-color: #367588;
+        position: relative;
+        left: 50%;
+        padding: 10px;
+    }
+    
+
 /* Estilo del pie de página. */
     footer{
         margin: 10px;   
        }
+

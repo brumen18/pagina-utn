@@ -1,20 +1,23 @@
     <h1>Edita la consulta en el siguiente formulario</h1>
-    <form action="/admin/editarcontacto" method="post">
+    <form   action="/admin/editarcontacto" method="post">
     {{#each texto}}
-    <label>Nombre de la persona</label>
+    <div class="formulario">
+    <label>Nombre</label>
     <input type="text" maxlength="100" name="nombre" id="nombre" placeholder="Nombre" value="{{nombre}}">
-    <label>Apellidos de la persona</label>
+    <label>Apellidos</label>
     <input type="text" maxlength="100" name="apellidos" id="apellidos" value="{{apellidos}}" placeholder="Apellidos">
-    <label>Correo de la persona</label>
+    <label>Correo</label>
     <input type="email" maxlength="100" placeholder="Correo" value="{{correo}}" name="correo" id="correo">
-    <label>Mensaje de la persona</label>
-    <textarea rows="3" name="mensaje" id="mensaje" placeholder="Mensaje">{{mensaje}}</textarea>
+    <label>Mensaje</label>
+    <textarea rows="8"  wrap="soft" name="mensaje" id="mensaje" placeholder="Mensaje" style="float: right; margin-left: 2em;" >{{mensaje}}</textarea>
+    </div>
     {{/each}}
-    <input type="submit" value="Actualizar consulta">
+    <input type="submit"  style="padding: 10px; position: relative; left: 50%;" value="Actualizar consulta">
     </form> 
     {{#if isContactoeditado}}
     <p style="margin-top: 3px;">La consulta se ha modificado exitosamente.</p>
     <a href="/admin/contactanos">Volver a la sección de contactanos administrador</a>
-    {{else}}
-    <p style="margin-top: 3px;">Algo salió mal. Por favor, contactá con algún superior o espera un rato a ver si el problema se soluciona.</p>
+    {{/if}}
+    {{#if isErrorcontactoeditado}}
+    <p style="margin-top: 3px; color: #ff0000;">Algo salió mal. Por favor, contactá con algún superior o espera un rato a ver si el problema se soluciona.</p>
     {{/if}}
