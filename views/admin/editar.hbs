@@ -2,7 +2,7 @@
     <form class="formulario1"  action="/admin/editar" method="post">
     {{#each texto}}
     <label>Título del artículo</label>
-    <input type="text" name="titulo" maxlength="60" id="titulo" value="{{titulo}}" placeholder="título">
+    <input type="text" name="titulo" maxlength="60" id="titulo" value="{{titulo}}" placeholder="título" required>
     <label>Cuerpo del artículo</label>
             <textarea name="cuerpo" id="cuerpo" rows="3" placeholder="Cuerpo">{{cuerpo}}</textarea>
             <input type="submit" value="Actualizar artículo">
@@ -13,7 +13,8 @@
     <a href="/admin/tib">Visita los temas de interés.</a>
     {{/if}}
     {{#if isErrored}}
-    <p style="margin-top: 5px; color: #ff0000;">Ocurrió un error. Intenta nuevamente más tarde.</p>
+    <p style="margin-top: 5px; color: #ff0000;">ERROR</p>
+  <p style="color: #ff0000;">El artículo no pudo ser actualizado. Volvé a intentarlo más tarde.</p>
     {{/if}}
 
            <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>

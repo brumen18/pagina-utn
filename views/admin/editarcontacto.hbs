@@ -7,7 +7,7 @@
     <label>Apellidos</label>
     <input type="text" maxlength="100" name="apellidos" id="apellidos" value="{{apellidos}}" placeholder="Apellidos">
     <label>Correo</label>
-    <input type="email" maxlength="100" placeholder="Correo" value="{{correo}}" name="correo" id="correo">
+    <input type="email" maxlength="100" placeholder="Correo" value="{{correo}}" name="correo" id="correo" required>
     <label>Mensaje</label>
     <textarea rows="8"  wrap="soft" name="mensaje" id="mensaje" placeholder="Mensaje" style="float: right; margin-left: 2em;" >{{mensaje}}</textarea>
     </div>
@@ -19,5 +19,5 @@
     <a href="/admin/contactanos">Volver a la sección de contactanos administrador</a>
     {{/if}}
     {{#if isErrorcontactoeditado}}
-    <p style="margin-top: 3px; color: #ff0000;">Algo salió mal. Por favor, contactá con algún superior o espera un rato a ver si el problema se soluciona.</p>
+    <p style="margin-top: 3px; color: #ff0000;">¡Ha habido un error! Por favor, intentalo de nuevo dentro de unos minutos. Si el problema persiste contactá con un superior.</p>
     {{/if}}

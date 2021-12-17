@@ -3,11 +3,10 @@
         <form action="/admin/agregar" method="post">
         <div class="formulario1">
             <label for="titulo">Ingresa un título (este se mostrará en la lista de temas)</label>
-            <input type="text" maxlength="60" placeholder="título" name="titulo" id="titulo">
+            <input type="text" maxlength="60" placeholder="título" name="titulo" id="titulo" required>
             <label for="cuerpo">Ingresa el cuerpo del artículo (utiliza las opciones para darle un estilo más atractivo)</label>
-        <textarea name="cuerpo" id="cuerpo" rows="2" placeholder="Cuerpo del artículo">hola</textarea>
-        
-        <input type="submit" value="Agregar artículo">
+        <textarea name="cuerpo" id="cuerpo" rows="2" placeholder="Cuerpo del artículo"></textarea>
+                <input type="submit" value="Agregar artículo">
         </div>
     </form>
   {{#if isAgregado}}
@@ -15,7 +14,7 @@
   <a href="/admin/tib">Visitar temas de interés</a>
   {{/if}}
   {{#if isError}}
-  <p style="margin-top: 5px; color: #ff0000;">Ocurrió un error al intentar publicar su artículo. Inténtelo de nuevo.</p>
+  <p style="margin-top: 5px; color: #ff0000;">Ocurrió un error al publicar tu artículo. Intentalo de nuevo.</p>
   {{/if}}
        <script type="application/javascript" src= "/tinymce/tinymce.min.js"></script>
     <script>
